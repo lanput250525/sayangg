@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR MY PRINCES ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LAYAR INTRO / TRANSISI: CINEMATIC FLOWER TUNNEL -->
+    <div id="intro-screen" class="intro-container">
+        <div id="flower-tunnel" class="tunnel"></div>
+        <div id="intro-label" class="intro-text">Opening a gift for you...🌸</div>
+    </div>
+
+    <!-- Lagu Latar -->
+    <audio id="bgMusic" src="lagu-romantis.mp3" loop></audio>
+
+    <!-- Navigasi Menu Atas -->
+    <nav id="main-nav" class="hidden-element">
+        <ul id="nav-list">
+            <li><a href="#" id="nav-welcome" class="active" onclick="gantiMenu('welcome')">1. Game</a></li>
+            <li><a href="#" id="nav-letter" class="disabled" onclick="gantiMenu('letter')">2. The Letter</a></li>
+            <li><a href="#" id="nav-pray" class="disabled" onclick="gantiMenu('pray')">3. Pray</a></li>
+            <li><a href="#" id="nav-love" class="disabled" onclick="gantiMenu('love')">4. Our Love</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTAINER UTAMA -->
+    <main id="main-container" class="container hidden-element">
+
+        <!-- MENU 1: WELCOME (GERBANG KODE PASSWORD + GAME) -->
+        <section id="menu-welcome" class="content-section active-section">
+            <div class="card" id="card-password">
+                <div class="icon-gembok">🔒</div>
+                <h2>Enter Our Special Code</h2>
+                <p>masukin sandi beb angka semua, harus bisa tebak wlee wleee</p>
+                <input type="password" id="inputKode" placeholder="Format: 250525" maxlength="6">
+                <button onclick="cekKode()">Unlock Website ✨</button>
+                <p id="pesanError" class="error-text"></p>
+            </div>
+
+            <!-- PAPAN GAME LOVE -->
+            <div id="game-layer" class="game-wrapper hidden-element">
+                <h2 class="game-title">Find the Pink Heart to Unlock My Love! 💕</h2>
+                <div id="game-board" class="board"></div>
+            </div>
+            
+            <!-- POPUP WELCOME SETELAH KLIK LOVE PINK -->
+            <div id="welcome-box" class="welcome-card hidden-element">
+                <h2>Welcome Bebi Honey... ❤️</h2>
+                <p>Lando senang bangett kenal sama bebi. Website ini spesial lando bikin buat puput termaniezzz ✨</p>
+                <button class="btn-next" onclick="pemicuNextKeLetter()">Next Section ❯</button>
+            </div>
+        </section>
+
+        <!-- MENU 2: THE LETTER (Bunga Gugur) -->
+        <section id="menu-letter" class="content-section">
+            <div id="flower-fall-container" class="bg-animation-layer"></div>
+            <div class="envelope-wrapper">
+                <div class="letter-content">
+                    <h3>Dear My Favorite Person, 📝</h3>
+                    <p>Sejak tanggal 25 Mei 2025, dunia lando jadi jauh lebih indah karena bebi, lando senang bangett kenal sama bebi. Terimakasih ya sayang sudah bertahan, menyayangi, and selalu ada buat lando sampai hari ini. lando beruntung banget bisa milikin princess pwetyyy.</p>
+                    <p>Website ini sengaja lando bikin buat bebi honeyy, sebagai pengingat kalaw my luvv ga pernah pudar ke puput termaniezzz. I love you so much! ❤️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU 3: PRAY (Bintang Berkilau Besar Statis) -->
+        <section id="menu-pray" class="content-section">
+            <div id="stars-container" class="bg-animation-layer"></div>
+            <div class="card pray-card">
+                <h2>A Little Prayer For You ✨</h2>
+                <div class="pray-text">
+                    <p>"Dear God, thank you for sending this beautiful soul into my life. Please protect her wherever she goes, grant her heart with endless happiness, and shower her days with blessings, Give my partner strength to face all the problems and challenges in their life."</p>
+                    <p>"Keep her safe, keep her healthy, and please let our hearts stay connected through every season of life. Amen."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MENU 4: OUR LOVE (Slide Foto + Hujan Love) -->
+        <section id="menu-love" class="content-section full-width">
+            <div id="heart-rain-container" class="bg-animation-layer"></div>
+            
+            <div class="slider-wrapper">
+                <h2>Our Precious Memories 🥰</h2>
+                
+                <div class="slider-container">
+                    <img id="fotoSlide" src="foto1.JPEG" alt="Memories">
+                    <button class="btn-slide prev" onclick="geserFoto(-1)">❮</button>
+                    <button class="btn-slide next" onclick="geserFoto(1)">❯</button>
+                </div>
+                <p class="slider-caption">Slide untuk melihat kenangan indah kita!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

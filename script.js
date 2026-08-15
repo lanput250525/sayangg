@@ -1,9 +1,9 @@
 // 1. DAFTAR FOTO KENANGAN (Pastikan nama file foto sesuai di folder Anda)
 const daftarFoto = [
-    'foto1.JPEG',
-    'foto2.JPEG',
-    'foto3.JPEG',
-    'foto4.JPEG'
+    'foto1.jpeg',
+    'foto2.jpeg',
+    'foto3.jpeg',
+    'foto4.jpeg'
 ];
 
 let indeksFotoSekarang = 0;
